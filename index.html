@@ -8,11 +8,6 @@
 	</script> -->
 </head>
 <body>
-	<% for (var k in htmlWebpackPlugin.files.chunks) { %>
-		<% if (k !== 'main') { %>
-			<%= k %>
-			<script src="<%= htmlWebpackPlugin.files.chunks[k].entry %>"></script>
-		<% } %>
-	<% } %>
+	<div id="app"></div>
 </body>
 </html>

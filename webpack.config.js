@@ -37,7 +37,51 @@ module.exports = {
 				    	}
 				     }
 				  ]
-			}
+			},
+			{
+				test: /\.(png|jpe?g|svg|gif)$/i,
+				use: [
+					{ 
+						loader: 'url-loader',
+						options: {
+							limit: 2000,
+							name: 'assets/[name]-[hash:5].[ext]',
+						}
+					},
+					{
+						loader: 'image-webpack-loader',
+						options: {
+							disable: true,
+					        mozjpeg: {
+					          progressive: true,
+					          quality: 65
+					        },
+					        pngquant: {
+					          quality: '65-90',
+					          speed: 4
+					        },
+					        gifsicle: {
+					          interlaced: false,
+					        },
+					        // the webp option will enable WEBP
+					        webp: {
+					          quality: 75
+					        }
+						},
+					}
+				]
+			},
+			{
+				test: /\.(html)$/,
+				use: [
+					{ 
+						loader: 'html-loader',
+					    options: {
+					    	attrs: ['img:src'],
+					    }
+					},
+				],
+			},
 		],
 	},
 	plugins: [
