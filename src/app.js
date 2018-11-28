@@ -1,5 +1,6 @@
 import Layer from './layer/layer.js';
 import './css/common.css';
+import pic1 from './assets/1.jpg'
 const App = function () {
 	var app = document.getElementById('app')
 	console.log(app)
