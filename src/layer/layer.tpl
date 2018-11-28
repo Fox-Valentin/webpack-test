@@ -1,6 +1,6 @@
 <div class="layer">
-	layer1
+	<%= name1 %>
 	<div>
-		layer2
+	<%= name2 %>
 	</div>
 </div>

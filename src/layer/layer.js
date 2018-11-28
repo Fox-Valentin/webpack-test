@@ -1,10 +1,11 @@
-// import tpl from './layer.html'
+import tpl from './layer.tpl'
+import './layer.less'
 
-function layer() {
+function Layer() {
 	return {
 		name: 'layer',
-		tpl: 'tpl',
+		tpl: tpl,
 	}
 }
 
-export default layer
+export default Layer

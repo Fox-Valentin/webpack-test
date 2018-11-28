@@ -2,17 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><%= htmlWebpackPlugin.options.title  %></title>
-	<!-- <script>
-		<%= compilation.assets[htmlWebpackPlugin.files.chunks.main.entry.substr(htmlWebpackPlugin.files.publicPath.length)].source() %>
-	</script> -->
+	<title>app</title>
 </head>
 <body>
-	<% for (var k in htmlWebpackPlugin.files.chunks) { %>
-		<% if (k !== 'main') { %>
-			<%= k %>
-			<script src="<%= htmlWebpackPlugin.files.chunks[k].entry %>"></script>
-		<% } %>
-	<% } %>
+	<div id="app"></div>
 </body>
 </html>

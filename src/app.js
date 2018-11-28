@@ -1,7 +1,13 @@
-import layer from './layer/layer.js';
+import Layer from './layer/layer.js';
 import './css/common.css';
 const App = function () {
-	console.log(layer)
+	var app = document.getElementById('app')
+	console.log(app)
+	var layer = new Layer()
+	app.innerHTML = layer.tpl({
+		name1: 'name1',
+		name2: 'name2',
+	})
 }
 
 new App()
